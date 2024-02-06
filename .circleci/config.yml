@@ -30,9 +30,9 @@ workflows:
           filters:
             branches:
               only: master
-      - deploy:
-          requires:
-            - test-java
-          filters:
-            branches:
-              only: master
+    # - deploy:
+    #      requires:
+    #        - test-java
+    #      filters:
+    #       branches:
+    #       only: master
