@@ -1,4 +1,4 @@
-package fr.univavignon.pokedex.api;
+package pokedex.api;
 
 import java.util.Comparator;
 import java.util.List;
