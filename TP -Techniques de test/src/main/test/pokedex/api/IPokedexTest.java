@@ -13,10 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import pokedex.api.IPokedex;
-import pokedex.api.PokedexException;
-import pokedex.api.Pokemon;
-import pokedex.api.PokemonComparators;
+import pokedex.api.*;
 
 public class IPokedexTest {
 

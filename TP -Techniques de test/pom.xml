@@ -26,8 +26,6 @@
     <maven.compiler.target>19</maven.compiler.target>
   </properties>
 
-
-
   <build>
     <plugins>
       <plugin>
@@ -101,6 +99,7 @@
           </execution>
         </executions>
       </plugin>
+      -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
@@ -121,11 +120,11 @@
           </execution>
         </executions>
       </plugin>
-      -->
+
 
 
     </plugins>
-    <testSourceDirectory>src/main/test/java</testSourceDirectory>
+    <testSourceDirectory>src/main/test/</testSourceDirectory>
     <sourceDirectory>src/main/java/</sourceDirectory>
   </build>
 

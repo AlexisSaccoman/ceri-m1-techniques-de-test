@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +17,7 @@ public class IPokemonTrainerFactoryTest {
     String name;
     Team team;
 
-    @BeforeEach
+    @BeforeAll
     public void setUp(){
         myTrainerFactory = mock(IPokemonTrainerFactory.class);
         myPokedexFactory = mock(IPokedexFactory.class);

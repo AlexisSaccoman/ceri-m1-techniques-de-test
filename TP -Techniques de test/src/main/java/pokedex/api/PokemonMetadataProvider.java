@@ -20,7 +20,6 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
         for (PokemonMetadata pokemon : metadataList) {
             int id = pokemon.getIndex();
             if (id == index) {
-                System.out.println(" # Pokémon n°"+ id + " = " + index + " trouvé, voici ses données : " + pokemon.toString() + "#");
                 return new PokemonMetadata(id, pokemon.getName(), pokemon.getAttack(), pokemon.getDefense(), pokemon.getStamina());
             }
         }
