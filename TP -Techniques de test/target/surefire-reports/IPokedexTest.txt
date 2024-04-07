@@ -2,19 +2,19 @@
 Test set: IPokedexTest
 -------------------------------------------------------------------------------
 Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE!
-IPokedexTest.testGetPokemons()  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.getPokemons()" because "this.pokedex" is null
-	at IPokedexTest.testGetPokemons(IPokedexTest.java:50)
-
-IPokedexTest.testGetPokemon()  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.getPokemon(int)" because "this.pokedex" is null
-	at IPokedexTest.testGetPokemon(IPokedexTest.java:40)
-
-IPokedexTest.testAddPokemon()  Time elapsed: 0 sec  <<< FAILURE!
+IPokedexTest.testAddAndGetPokemon()  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.addPokemon(pokedex.api.Pokemon)" because "this.pokedex" is null
-	at IPokedexTest.testAddPokemon(IPokedexTest.java:33)
+	at IPokedexTest.testAddAndGetPokemon(IPokedexTest.java:37)
+
+IPokedexTest.testGetPokemonsWithComparator()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.getPokemons(java.util.Comparator)" because "this.pokedex" is null
+	at IPokedexTest.testGetPokemonsWithComparator(IPokedexTest.java:59)
 
 IPokedexTest.testSize()  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.size()" because "this.pokedex" is null
-	at IPokedexTest.testSize(IPokedexTest.java:26)
+	at IPokedexTest.testSize(IPokedexTest.java:29)
+
+IPokedexTest.testGetPokemons()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokedex.getPokemons()" because "this.pokedex" is null
+	at IPokedexTest.testGetPokemons(IPokedexTest.java:43)
 
