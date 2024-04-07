@@ -1,5 +1,6 @@
 pokedex\api\IPokemonTrainerFactory.class
 pokedex\api\IPokedex.class
+pokedex\api\PokemonMetadataProvider.class
 pokedex\api\IPokedexFactory.class
 pokedex\api\IPokemonFactory.class
 pokedex\api\Team.class
@@ -7,5 +8,9 @@ pokedex\api\PokemonComparators.class
 pokedex\api\Pokemon.class
 pokedex\api\IPokemonMetadataProvider.class
 pokedex\api\PokedexException.class
+pokedex\api\PokemonFactory.class
+pokedex\api\PokemonTrainerFactory.class
+pokedex\api\Pokedex.class
 pokedex\api\PokemonTrainer.class
+pokedex\api\PokedexFactory.class
 pokedex\api\PokemonMetadata.class

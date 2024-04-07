@@ -1,5 +1,6 @@
 package pokedex.api;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pokedex.api.IPokemonFactory;
@@ -9,42 +10,43 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class IPokemonFactoryTest {
+    private IPokemonFactory pokemonFactory = new PokemonFactory();
+    Pokemon myBulbizarre;
+    Pokemon myAquali;
 
-    private IPokemonFactory pokemonFactory;
 
-    @BeforeEach
+    @BeforeAll
     public void setUp() {
-        // Crée un mock pour IPokemonFactory
-        pokemonFactory = mock(IPokemonFactory.class);
+        pokemonFactory = new PokemonFactory();
+        myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);
+        myAquali = new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
     }
-    /*
 
     @Test
     public void testCreatePokemon() {
+        assertNotNull(pokemonFactory.createPokemon(0, 613, 64, 4000, 4));
+        assertNotNull(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4));
+    }
+    @Test
+    public void TestGetHP() {
+        assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getCp(), myBulbizarre.getCp());
+    }
+    @Test
+    public void TestGetCP(){
+        assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getHp(), myBulbizarre.getHp());
+    }
+    @Test
+    public void TestGetDust(){
+        assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getDust(), myBulbizarre.getDust());
+    }
+    @Test
+    public void TestGetCandy(){
+        assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getCandy(), myBulbizarre.getCandy());
+    }
 
-        // valeurs du Pokemon Attendu
-        int index = 0;
-        String name = "Bulbizzare";
-        int attack = 126;
-        int defense = 126;
-        int stamina = 90;
-        int cp = 613;
-        int hp = 64;
-        int dust = 4000;
-        int candy = 4;
-        int iv = 56;
+    @Test
+    public void TestPokedexException() {
+        pokemonFactory.createPokemon(-58, 0, 0, 0, 0);
+    }
 
-        Pokemon expectedPokemon = new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56);
-        when(pokemonFactory.createPokemon(index, cp, hp, dust, candy)).thenReturn(expectedPokemon);
-
-        Pokemon createdPokemon = pokemonFactory.createPokemon(index, cp, hp, dust, candy);
-        verify(pokemonFactory).createPokemon(index, cp, hp, dust, candy);
-
-        // test des valeurs
-        assertEquals(expectedPokemon.getIndex(), createdPokemon.getIndex());
-        assertEquals(expectedPokemon.getCp(), createdPokemon.getCp());
-        assertEquals(expectedPokemon.getHp(), createdPokemon.getHp());
-        assertEquals(expectedPokemon.getDust(), createdPokemon.getDust());
-        assertEquals(expectedPokemon.getCandy(), createdPokemon.getCandy());
-    }*/
 }

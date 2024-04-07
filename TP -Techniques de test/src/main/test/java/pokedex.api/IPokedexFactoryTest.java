@@ -3,28 +3,30 @@ package pokedex.api;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import pokedex.api.*;
 
 public class IPokedexFactoryTest {
 
+    IPokedexFactory pokedexFactory;
+    IPokemonMetadataProvider pokemonMetadataProvider;
+    IPokemonFactory pokemonFactory;
+    IPokedex pokedex;
+
+    @BeforeAll
+    public void setUp() {
+        pokedexFactory = new PokedexFactory();
+        pokemonMetadataProvider = new PokemonMetadataProvider();
+        pokemonFactory = new PokemonFactory();
+        pokedex = new Pokedex(pokemonFactory);
+    }
+
+
     @Test
-    public void testCreatePokedex() {
-        // Créez des mocks pour les dépendances de la méthode createPokedex
-        IPokemonMetadataProvider metadataProvider = mock(IPokemonMetadataProvider.class);
-        IPokemonFactory pokemonFactory = mock(IPokemonFactory.class);
-        IPokedex expectedPokedex = mock(IPokedex.class);
-
-        // Créez un IPokedexFactory simulé avec le comportement attendu pour la méthode createPokedex
-        IPokedexFactory pokedexFactory = mock(IPokedexFactory.class);
-        when(pokedexFactory.createPokedex(metadataProvider, pokemonFactory)).thenReturn(expectedPokedex);
-
-        // Appelez la méthode à tester
-        IPokedex pokedex = pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
-        verify(pokedexFactory).createPokedex(metadataProvider, pokemonFactory);
-
-        // Vérifiez que le résultat n'est pas nul
-        assertNotNull(pokedex);
+    public void createPokedexTest() {
+        assertNotNull(pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory));
     }
 }

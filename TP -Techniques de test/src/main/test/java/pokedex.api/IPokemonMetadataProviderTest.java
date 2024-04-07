@@ -1,32 +1,42 @@
 package pokedex.api;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import org.mockito.Mockito;
 import pokedex.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 
 public class IPokemonMetadataProviderTest {
 
+    IPokemonMetadataProvider myDataProvider = new PokemonMetadataProvider();
+    PokemonMetadata bulbiMetadata;
+    PokemonMetadata aquaMetadata;
+
+    @BeforeAll
+    public void setUp() throws PokedexException{
+        myDataProvider = new PokemonMetadataProvider();
+        bulbiMetadata = myDataProvider.getPokemonMetadata(0);
+        aquaMetadata = myDataProvider.getPokemonMetadata(133);
+    }
+
     @Test
     public void testGetPokemonMetadata() throws PokedexException {
-        // Crée un mock pour IPokemonMetadataProvider
-        IPokemonMetadataProvider metadataProvider = mock(IPokemonMetadataProvider.class);
+        PokemonMetadata metadata = myDataProvider.getPokemonMetadata(133);
+        assertNotNull(metadata);
+        assertEquals(133, metadata.getIndex());
+        assertEquals("Aquali", metadata.getName());
+        assertEquals(186, metadata.getAttack());
+        assertEquals(168, metadata.getDefense());
+        assertEquals(260, metadata.getStamina());
+    }
 
-        // Définir l'index du Pokémon dont vous voulez récupérer les métadonnées
-        int index = 0;
-
-        // Crée un PokémonMetadata simulé avec des valeurs d'exemple
-        PokemonMetadata expectedMetadata = new PokemonMetadata(index, "Bulbizarre", 126, 126, 90);
-        when(metadataProvider.getPokemonMetadata(index)).thenReturn(expectedMetadata);
-
-        // Récupère les métadonnées du Pokémon
-        PokemonMetadata actualMetadata = metadataProvider.getPokemonMetadata(index);
-        verify(metadataProvider).getPokemonMetadata(index);
-
-        // Vérifie que les métadonnées du Pokémon retournées correspondent à celles simulées
-        assertEquals(expectedMetadata, actualMetadata);
+    @Test
+    public void TestPokedexException() throws PokedexException {
+        assertEquals(myDataProvider.getPokemonMetadata(-58), null);
+        assertEquals(myDataProvider.getPokemonMetadata(1000), null);
     }
 }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,66 +20,65 @@ import pokedex.api.PokemonComparators;
 
 public class IPokedexTest {
 
-    private IPokedex pokedex;
-    /*
 
-    @BeforeEach
-    public void setUp() {
-        pokedex = mock(IPokedex.class);
+    IPokedex myPokedex;
+    Pokemon myBulbizarre;
+    Pokemon myAquali;
+    PokemonFactory pokemonFactory;
+    PokemonMetadataProvider pokemonMetadataProvider;
+    PokedexFactory pokedexFactory;
+
+    @BeforeAll
+    public void initTestEnvironment() {
+        pokemonFactory = new PokemonFactory();
+        pokemonMetadataProvider = new PokemonMetadataProvider();
+        pokedexFactory = new PokedexFactory();
+        myPokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
+        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
+        myAquali = myPokedex.createPokemon(133, 2729, 202, 5000, 4);
+        myPokedex.addPokemon(myBulbizarre);
+        myPokedex.addPokemon(myAquali);
+
     }
 
     @Test
-    public void testSize() {
-        assertEquals(0, pokedex.size());
-        pokedex.addPokemon(new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100));
-        assertEquals(0, pokedex.size());
+    public void addPokemonTest() throws PokedexException {
+        int index = myPokedex.addPokemon(myBulbizarre);
+        assertEquals(myBulbizarre, myPokedex.getPokemon(myBulbizarre.getIndex()));
     }
 
     @Test
-    public void testAddAndGetPokemon() throws PokedexException {
-        Pokemon pokemon = new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56);
-        int index = pokedex.addPokemon(pokemon);
-        assertEquals(pokemon, pokedex.getPokemon(index));
+    public void sizeTest() {
+        assertEquals(myPokedex.size(), 2);
     }
 
     @Test
-    public void testGetPokemons() {
-        List<Pokemon> pokemons = pokedex.getPokemons();
-        assertNotNull(pokemons);
-        assertEquals(0, pokemons.size());
-
-        pokedex.addPokemon(new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56));
-
-        pokemons = pokedex.getPokemons();
-        assertNotNull(pokemons);
-        assertEquals(1, pokemons.size());
+    public void getPokemonMetadataTest() throws PokedexException {
+        int index = myPokedex.getPokemon(0).getIndex();
+        String name = myPokedex.getPokemon(0).getName();
+        int attack = myPokedex.getPokemon(0).getAttack();
+        int defense = myPokedex.getPokemon(0).getDefense();
+        int stamina = myPokedex.getPokemon(0).getStamina();
+        assertEquals(index, pokemonMetadataProvider.getPokemonMetadata(0).getIndex());
+        assertEquals(name, pokemonMetadataProvider.getPokemonMetadata(0).getName());
+        assertEquals(attack, pokemonMetadataProvider.getPokemonMetadata(0).getAttack());
+        assertEquals(defense, pokemonMetadataProvider.getPokemonMetadata(0).getDefense());
+        assertEquals(stamina, pokemonMetadataProvider.getPokemonMetadata(0).getStamina());
+        assertEquals(pokemonMetadataProvider.getPokemonMetadata(0), myPokedex.getPokemonMetadata(0));
     }
 
     @Test
-    public void testGetPokemonsWithComparator() {
-        Comparator<Pokemon> comparator = PokemonComparators.INDEX;
-
-        // Test avec un pokedex vide
-        List<Pokemon> pokemons = pokedex.getPokemons(comparator);
-        assertNotNull(pokemons); // vérifie que la liste retournée n'est pas nulle
-        assertEquals(0, pokemons.size()); // vérifie que la liste est vide
-
-        // Ajoutez deux pokemons à votre pokedex
-        pokedex.addPokemon(new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56));
-        pokedex.addPokemon(new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100));
-
-        // Test avec deux pokemons ajoutés
-        pokemons = pokedex.getPokemons(comparator);
-        assertNotNull(pokemons); // vérifie que la liste retournée n'est pas nulle
-        assertEquals(2, pokemons.size()); // vérifie que la taille de la liste est 2
-
-        // Vérifiez que la liste est triée par index
-        for (int i = 0; i < pokemons.size() - 1; i++) {
-            Pokemon currentPokemon = pokemons.get(i);
-            Pokemon nextPokemon = pokemons.get(i + 1);
-            assertTrue(comparator.compare(currentPokemon, nextPokemon) <= 0); // vérifie que le comparateur tri correctement les Pokémon
-        }
+    public void throwPokedexExceptionTest() throws PokedexException {
+        assertThrows(PokedexException.class, () -> {
+            myPokedex.getPokemon(156);
+        });
     }
 
-    */
+    @Test
+    public void getSortedList() {
+        assertNotNull(myPokedex.getPokemons());
+        assertNotNull(myPokedex.getPokemons(PokemonComparators.NAME));
+    }
+
+
 }
