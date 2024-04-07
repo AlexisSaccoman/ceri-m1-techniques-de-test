@@ -35,3 +35,13 @@ Pour chaque rendu vous devez créer un tag à partir du commit qui correspond à
 Si vous ne spécifiez pas de tag, le dernier commit à la date-heure de la fin de séance sera celui considéré.
 
 [^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
+
+Badges :
+
+**Nom et prénom :** Saccoman Alexis
+
+**Groupe :** ILSEN-Classique
+
+[![codecov](https://circleci.com/gh/AlexisSaccoman/ceri-m1-techniques-de-test.svg?style=svg)](https://app.circleci.com/pipelines/github/Corentin-RUIS/ceri-m1-techniques-de-test?branch=master)
+
+[![CircleCI](https://codecov.io/gh/AlexisSaccoman/ceri-m1-techniques-de-test/branch/master/graph/badge.svg)]((https://app.codecov.io/gh/AlexisSaccoman/ceri-m1-techniques-de-test))
