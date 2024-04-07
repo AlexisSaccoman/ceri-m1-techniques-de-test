@@ -20,7 +20,7 @@ import pokedex.api.PokemonComparators;
 public class IPokedexTest {
 
     private IPokedex pokedex;
-    /*
+
 
     @BeforeEach
     public void setUp() {
@@ -80,5 +80,5 @@ public class IPokedexTest {
         }
     }
 
-    */
+
 }
