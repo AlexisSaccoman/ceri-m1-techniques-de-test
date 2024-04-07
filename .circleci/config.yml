@@ -9,8 +9,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build
-          command: mvn -B -DskipTests clean package
+          name: Calculate cache key
+          command: |-
+            find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
+                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
       - run:
           name: Test
           command: mvn verify
