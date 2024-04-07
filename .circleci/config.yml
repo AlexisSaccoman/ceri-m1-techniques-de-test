@@ -24,9 +24,7 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-      # Upload coverage report to Codecov
-      - codecov/upload:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      - codecov/upload
 
 
 workflows:
