@@ -25,7 +25,8 @@ jobs:
           paths:
             - ~/.m2/repository
       # Upload coverage report to Codecov
-      - codecov/upload
+      - codecov/upload:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
 
 workflows:
