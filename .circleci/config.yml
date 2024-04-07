@@ -1,39 +1,21 @@
 version: 2.1
+orbs:
+  codecov: codecov/codecov@4.0.1
 jobs:
-  test-java:
+  build-and-test:
     docker:
-      - image: cimg/openjdk:19.0
-    working_directory: ~/project/TP -Techniques de test
+      - image: cimg/openjdk:11.0
     steps:
-      - checkout:
-          path: ~/project
+      - checkout
       - run:
-          name: Calculate cache key
-          command: |-
-            find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
-                    sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
-      - restore_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+          name: Build
+          command: mvn -B -DskipTests clean package
       - run:
+          name: Test
           command: mvn verify
-      - store_test_results:
-          path: target/surefire-reports
-      - save_cache:
-          key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
-          paths:
-            - ~/.m2/repository
-      - codecov/upload:
-        uses: codecov/codecov-action@v4.0.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: AlexisSaccoman/ceri-m1-techniques-de-test
-
+      - codecov/upload
 
 workflows:
-  version: 2
-  build-and-test:
+  sample:
     jobs:
-      - test-java:
-          filters:
-            branches:
-              only: master
+      - build-and-test
