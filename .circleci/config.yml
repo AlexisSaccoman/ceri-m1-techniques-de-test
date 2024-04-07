@@ -6,13 +6,19 @@ jobs:
     docker:
       - image: cimg/openjdk:11.0
     steps:
-      - checkout
-      - run:
-          name: Build
-          command: mvn -B -DskipTests clean package
-      - run:
-          name: Test
-          command: mvn verify
+      - checkout:
+          path: ~/project
+            - run:
+                name: Calculate cache key
+                command: |-
+                  find . -name 'pom.xml' -o -name 'gradlew*' -o -name '*.gradle*' | \
+                          sort | xargs cat > /tmp/CIRCLECI_CACHE_KEY
+            - restore_cache:
+                key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
+            - run:
+                command: mvn verify
+            - store_test_results:
+                path: target/surefire-reports
       - codecov/upload
 
 workflows:
