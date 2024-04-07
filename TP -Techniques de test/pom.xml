@@ -26,11 +26,10 @@
     <maven.compiler.target>19</maven.compiler.target>
   </properties>
 
+
+
   <build>
-    <sourceDirectory>src/main/java/</sourceDirectory>
-    <testSourceDirectory>src/main/test/java/pokedex.api</testSourceDirectory>
     <plugins>
-      <!-- Plugin pour compiler le code source -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -60,7 +59,71 @@
           </execution>
         </executions>
       </plugin>
+
+      <!--<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <id>checkstyle</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <configLocation>checkstyle.xml</configLocation>
+          <consoleOutput>true</consoleOutput>
+          <failsOnError>true</failsOnError>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.bordertech.buildtools</groupId>
+        <artifactId>badger</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <phase>compile</phase>
+            <goals>
+              <goal>badges</goal>
+            </goals>
+            <configuration>
+              <outputDir>target/site/badges</outputDir>
+              <inputFiles>
+                <inputFile>target/checkstyle-result.xml</inputFile>
+              </inputFiles>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <show>protected</show>
+          <nohelp>true</nohelp>
+          <linksource>true</linksource>
+          <charset>UTF-8</charset>
+        </configuration>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <phase>package</phase>
+            <goals>
+              <goal>javadoc</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      -->
+
+
     </plugins>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <sourceDirectory>src/main/java/</sourceDirectory>
   </build>
 
 
