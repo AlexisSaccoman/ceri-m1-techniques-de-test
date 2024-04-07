@@ -22,8 +22,7 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
             - ~/.m2/repository
-      # Step to upload coverage reports to Codecov
-      - name: Upload coverage reports to Codecov
+      - codecov/upload:
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
