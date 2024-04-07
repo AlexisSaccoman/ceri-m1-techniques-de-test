@@ -1,3 +1,5 @@
+package pokedex.api;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
@@ -14,7 +16,6 @@ import pokedex.api.IPokedex;
 import pokedex.api.PokedexException;
 import pokedex.api.Pokemon;
 import pokedex.api.PokemonComparators;
-
 
 public class IPokedexTest {
 

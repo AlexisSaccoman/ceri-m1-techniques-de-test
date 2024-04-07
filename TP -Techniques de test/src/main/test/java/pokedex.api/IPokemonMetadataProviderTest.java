@@ -1,4 +1,6 @@
+package pokedex.api;
 import org.junit.jupiter.api.Test;
+
 import org.mockito.Mockito;
 import pokedex.api.*;
 

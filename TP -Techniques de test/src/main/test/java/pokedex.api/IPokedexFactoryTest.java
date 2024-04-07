@@ -1,3 +1,4 @@
+package pokedex.api;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
