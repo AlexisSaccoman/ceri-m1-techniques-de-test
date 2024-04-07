@@ -29,6 +29,10 @@ jobs:
 
 
 workflows:
-  sample:
+  version: 2
+  build-and-test:
     jobs:
-      - build-and-test
+      - test-java:
+          filters:
+            branches:
+              only: master
