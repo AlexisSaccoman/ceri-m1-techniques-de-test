@@ -1,6 +1,5 @@
-IPokemonTrainerFactoryTest.class
-IPokedexFactoryTest.class
-IPokemonFactoryTest.class
-IPokedexTest.class
+pokedex\api\IPokedexTest.class
+pokedex\api\IPokemonTrainerFactoryTest.class
+pokedex\api\IPokedexFactoryTest.class
 pokedex\api\IPokemonFactoryTest.class
-IPokemonMetadataProviderTest.class
+pokedex\api\IPokemonMetadataProviderTest.class
