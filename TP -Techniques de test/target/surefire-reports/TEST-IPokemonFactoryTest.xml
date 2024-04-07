@@ -67,7 +67,7 @@
   </properties>
   <testcase classname="IPokemonFactoryTest" name="IPokemonFactoryTest.testCreatePokemon" time="0">
     <failure message="Cannot invoke &quot;pokedex.api.IPokemonFactory.createPokemon(int, int, int, int, int)&quot; because &quot;this.pokemonFactory&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokemonFactory.createPokemon(int, int, int, int, int)&quot; because &quot;this.pokemonFactory&quot; is null
-	at IPokemonFactoryTest.testCreatePokemon(IPokemonFactoryTest.java:36)
+	at IPokemonFactoryTest.testCreatePokemon(IPokemonFactoryTest.java:69)
 </failure>
   </testcase>
 </testsuite>

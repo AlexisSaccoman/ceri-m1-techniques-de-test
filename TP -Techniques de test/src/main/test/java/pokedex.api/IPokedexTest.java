@@ -16,8 +16,7 @@ import pokedex.api.Pokemon;
 import pokedex.api.PokemonComparators;
 
 
-// v1 : erreur d'init du pokedex : comportement mock  à définir
-/*public class IPokedexTest {
+public class IPokedexTest {
 
     private IPokedex pokedex;
 
@@ -77,47 +76,5 @@ import pokedex.api.PokemonComparators;
             Pokemon nextPokemon = pokemons.get(i + 1);
             assertTrue(comparator.compare(currentPokemon, nextPokemon) <= 0); // vérifie que le comparateur tri correctement les Pokémon
         }
-    }
-}*/
-
-public class IPokedexTest {
-
-    private IPokedex pokedex;
-
-    @BeforeEach
-    public void setUp() {
-        pokedex = mock(IPokedex.class);
-    }
-
-    @Test
-    public void testSize() {
-        assertEquals(0, pokedex.size());
-        // Vous devez implémenter le comportement d'addPokemon pour incrémenter la taille
-        when(pokedex.addPokemon(any())).thenReturn(1);
-        pokedex.addPokemon(new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100));
-        assertEquals(1, pokedex.size());
-    }
-
-    @Test
-    public void testAddAndGetPokemon() throws PokedexException {
-        Pokemon pokemon = new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56);
-        when(pokedex.addPokemon(pokemon)).thenReturn(1);
-        when(pokedex.getPokemon(1)).thenReturn(pokemon);
-        assertEquals(pokemon, pokedex.getPokemon(pokedex.addPokemon(pokemon)));
-    }
-
-    @Test
-    public void testGetPokemons() {
-        // Mocking getPokemons method to return a list with one Pokemon
-        when(pokedex.getPokemons()).thenReturn(List.of(new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56)));
-
-        List<Pokemon> pokemons = pokedex.getPokemons();
-        assertNotNull(pokemons);
-        assertEquals(1, pokemons.size());
-    }
-
-    @Test
-    public void testGetPokemonsWithComparator() {
-        // Vous devrez implémenter cette partie lorsque vous aurez la classe PokemonComparators
     }
 }

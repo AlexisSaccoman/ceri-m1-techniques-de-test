@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="4" name="IPokedexTest" time="0" errors="0" skipped="0">
+<testsuite tests="4" failures="4" name="IPokedexTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2023.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -65,24 +65,24 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="IPokedexTest" name="IPokedexTest.testAddAndGetPokemon" time="0">
+  <testcase classname="IPokedexTest" name="IPokedexTest.testAddAndGetPokemon" time="0.001">
     <failure message="Cannot invoke &quot;pokedex.api.IPokedex.addPokemon(pokedex.api.Pokemon)&quot; because &quot;this.pokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.addPokemon(pokedex.api.Pokemon)&quot; because &quot;this.pokedex&quot; is null
-	at IPokedexTest.testAddAndGetPokemon(IPokedexTest.java:37)
+	at IPokedexTest.testAddAndGetPokemon(IPokedexTest.java:104)
 </failure>
   </testcase>
   <testcase classname="IPokedexTest" name="IPokedexTest.testGetPokemonsWithComparator" time="0">
     <failure message="Cannot invoke &quot;pokedex.api.IPokedex.getPokemons(java.util.Comparator)&quot; because &quot;this.pokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.getPokemons(java.util.Comparator)&quot; because &quot;this.pokedex&quot; is null
-	at IPokedexTest.testGetPokemonsWithComparator(IPokedexTest.java:59)
-</failure>
-  </testcase>
-  <testcase classname="IPokedexTest" name="IPokedexTest.testSize" time="0">
-    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.pokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.pokedex&quot; is null
-	at IPokedexTest.testSize(IPokedexTest.java:29)
+	at IPokedexTest.testGetPokemonsWithComparator(IPokedexTest.java:124)
 </failure>
   </testcase>
   <testcase classname="IPokedexTest" name="IPokedexTest.testGetPokemons" time="0">
     <failure message="Cannot invoke &quot;pokedex.api.IPokedex.getPokemons()&quot; because &quot;this.pokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.getPokemons()&quot; because &quot;this.pokedex&quot; is null
-	at IPokedexTest.testGetPokemons(IPokedexTest.java:43)
+	at IPokedexTest.testGetPokemons(IPokedexTest.java:112)
+</failure>
+  </testcase>
+  <testcase classname="IPokedexTest" name="IPokedexTest.testSize" time="0">
+    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.pokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.pokedex&quot; is null
+	at IPokedexTest.testSize(IPokedexTest.java:94)
 </failure>
   </testcase>
 </testsuite>

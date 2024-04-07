@@ -6,8 +6,7 @@ import pokedex.api.Pokemon;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-
-/*public class IPokemonFactoryTest {
+public class IPokemonFactoryTest {
 
     private IPokemonFactory pokemonFactory;
 
@@ -44,36 +43,5 @@ import static org.mockito.Mockito.*;
         assertEquals(expectedPokemon.getHp(), createdPokemon.getHp());
         assertEquals(expectedPokemon.getDust(), createdPokemon.getDust());
         assertEquals(expectedPokemon.getCandy(), createdPokemon.getCandy());
-    }
-}*/
-
-public class IPokemonFactoryTest {
-
-    private IPokemonFactory pokemonFactory;
-
-    @BeforeEach
-    public void setUp() {
-        pokemonFactory = mock(IPokemonFactory.class);
-    }
-
-    @Test
-    public void testCreatePokemon() {
-        int index = 0;
-        int cp = 613;
-        int hp = 64;
-        int dust = 4000;
-        int candy = 4;
-        Pokemon expectedPokemon = new Pokemon(0, "Bulbizzare", 126, 126, 90, 613, 64, 4000, 4, 56);
-
-        // Mocking createPokemon method to return expectedPokemon when called with specific arguments
-        when(pokemonFactory.createPokemon(index, cp, hp, dust, candy)).thenReturn(expectedPokemon);
-
-        Pokemon createdPokemon = pokemonFactory.createPokemon(index, cp, hp, dust, candy);
-
-        // Verifying that createPokemon method was called with specific arguments
-        verify(pokemonFactory).createPokemon(index, cp, hp, dust, candy);
-
-        // Comparing expected and created Pokemon
-        assertEquals(expectedPokemon, createdPokemon);
     }
 }
