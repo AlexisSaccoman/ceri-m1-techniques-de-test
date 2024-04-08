@@ -6,12 +6,19 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
     ArrayList<PokemonMetadata> metadataList;
 
+    /**
+     * Constructor of PokemonMetadataProvider
+     * */
     public PokemonMetadataProvider() {
         this.metadataList = new ArrayList<PokemonMetadata>();
         metadataList.add(new PokemonMetadata(0, "Bulbizarre", 126, 126, 90));
         metadataList.add(new PokemonMetadata(133, "Aquali", 186, 168, 260));
     }
 
+
+    /**
+     * @Return PokemonMetadata
+     * */
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
         if (index < 0 || index > 150) {
