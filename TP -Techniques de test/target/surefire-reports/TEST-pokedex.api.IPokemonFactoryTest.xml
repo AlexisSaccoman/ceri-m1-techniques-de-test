@@ -64,10 +64,10 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testPokedexException" time="0"/>
-  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetCP" time="0"/>
-  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testCreatePokemon" time="0"/>
   <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetHP" time="0"/>
-  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetCandy" time="0"/>
+  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetCP" time="0"/>
   <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetDust" time="0"/>
+  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testCreatePokemon" time="0"/>
+  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testGetCandy" time="0"/>
+  <testcase classname="pokedex.api.IPokemonFactoryTest" name="pokedex.api.IPokemonFactoryTest.testPokedexException" time="0"/>
 </testsuite>

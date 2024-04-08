@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="pokedex.api.IRocketPokemonFactoryTest" time="1.092" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="pokedex.api.IRocketPokemonFactoryTest" time="0.761" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,9 +64,9 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCP" time="0.186"/>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testCreatePokemon" time="0.4"/>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetHP" time="0.195"/>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCandy" time="0.193"/>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetDust" time="0.118"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetHP" time="0.136"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCP" time="0.132"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetDust" time="0.127"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testCreatePokemon" time="0.253"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCandy" time="0.113"/>
 </testsuite>

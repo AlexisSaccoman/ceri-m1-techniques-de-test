@@ -65,7 +65,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testGetName" time="0"/>
-  <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testCreateTrainer" time="0"/>
-  <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testGetTeam" time="0"/>
   <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testGetPokedex" time="0"/>
+  <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testGetTeam" time="0"/>
+  <testcase classname="pokedex.api.IPokemonTrainerFactoryTest" name="pokedex.api.IPokemonTrainerFactoryTest.testCreateTrainer" time="0"/>
 </testsuite>

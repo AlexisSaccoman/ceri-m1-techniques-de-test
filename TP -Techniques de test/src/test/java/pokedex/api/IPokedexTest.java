@@ -63,5 +63,17 @@ public class IPokedexTest {
         assertNotNull(myPokedex.getPokemons(PokemonComparators.NAME));
     }
 
+    @Test
+    public void testGetPokemon() throws PokedexException {
+        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
+        Pokemon bulbi = myPokedex.getPokemon(0);
+
+        assertEquals(myBulbizarre.getIndex(), bulbi.getIndex());
+        assertEquals(myBulbizarre.getCp(), bulbi.getCp());
+        assertEquals(myBulbizarre.getHp(), bulbi.getHp());
+        assertEquals(myBulbizarre.getDust(), bulbi.getDust());
+        assertEquals(myBulbizarre.getCandy(), bulbi.getCandy());
+    }
+
 
 }
