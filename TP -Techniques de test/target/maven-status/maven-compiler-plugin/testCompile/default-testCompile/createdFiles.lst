@@ -3,3 +3,4 @@ pokedex\api\IPokemonTrainerFactoryTest.class
 pokedex\api\IPokedexFactoryTest.class
 pokedex\api\IPokemonFactoryTest.class
 pokedex\api\IPokemonMetadataProviderTest.class
+pokedex\api\IRocketPokemonFactoryTest.class

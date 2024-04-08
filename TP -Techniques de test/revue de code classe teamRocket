@@ -1,0 +1,41 @@
+Points positifs :
+
+    Utilisation de UnmodifiableMap :
+        L'utilisation de UnmodifiableMap pour rendre la map immuable est une bonne pratique, ce qui garantit que la map ne peut pas être modifiée une fois initialisée.
+
+    Génération de statistiques aléatoires :
+        La génération aléatoire des statistiques pour les Pokémon est une approche intéressante pour simuler des caractéristiques variées et réalistes pour les Pokémon générés.
+
+    Gestion des index inexistants :
+        La gestion des index de Pokémon inexistants dans la map en retournant une valeur par défaut ("MISSINGNO") est une bonne pratique pour éviter les erreurs.
+
+
+Points à améliorer :
+
+    Performance de la génération aléatoire :
+        La méthode generateRandomStat() utilise une boucle pour générer des statistiques aléatoires. Cependant, la méthode actuelle est peu efficace car elle itère un grand nombre de fois à chaque appel. Une approche plus efficace serait souhaitable pour améliorer les performances, par exemple en utilisant une seule instance de Random.
+
+    Gestion des valeurs par défaut :
+        La méthode createPokemon() utilise des valeurs par défaut pour les statistiques lorsque l'index du Pokémon est négatif. Cependant, ces valeurs (1000 pour l'attaque, la défense et l'endurance) semblent arbitraires. Une meilleure approche pourrait être d'utiliser des valeurs basées sur une logique ou des constantes définies.
+
+    Tests unitaires :
+        La classe ne contient pas de tests unitaires pour valider son comportement. Il est crucial d'écrire des tests pour s'assurer que chaque fonctionnalité de la classe fonctionne comme prévu et pour faciliter la détection d'éventuels problèmes lors de modifications ultérieures.
+
+    Commentaires :
+        Des commentaires pour expliquer le but de chaque méthode et la logique derrière certaines décisions de conception pourraient améliorer la compréhension du code par d'autres développeurs et faciliter la maintenance.
+
+
+
+Suggestions générales :
+
+    Optimisation des performances :
+        Revoir les algorithmes utilisés pour garantir des performances optimales, en particulier pour la génération aléatoire des statistiques.
+
+    Refactoring :
+        Examiner la possibilité de refactoriser le code pour le rendre plus modulaire, lisible et facile à comprendre.
+
+    Tests :
+        Écrire des tests unitaires exhaustifs pour couvrir toutes les fonctionnalités de la classe, en particulier pour les cas aux limites et les cas d'erreur.
+
+    Documentation :
+        Ajouter des commentaires dans le code pour expliquer les choix de conception et les parties complexes du code.

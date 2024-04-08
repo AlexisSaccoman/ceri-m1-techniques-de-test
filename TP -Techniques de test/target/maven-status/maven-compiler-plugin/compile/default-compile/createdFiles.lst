@@ -13,4 +13,5 @@ pokedex\api\PokemonTrainerFactory.class
 pokedex\api\Pokedex.class
 pokedex\api\PokemonTrainer.class
 pokedex\api\PokedexFactory.class
+pokedex\apiS\RocketPokemonFactory.class
 pokedex\api\PokemonMetadata.class

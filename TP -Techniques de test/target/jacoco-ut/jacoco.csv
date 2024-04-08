@@ -1,4 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Archetype - TP-Techniques-de-test,pokedex.apiS,RocketPokemonFactory,9,96,1,5,4,22,1,6,0,4
 Archetype - TP-Techniques-de-test,pokedex.api,Pokedex,72,0,4,0,16,0,10,0,8,0
 Archetype - TP-Techniques-de-test,pokedex.api,PokemonFactory,0,17,0,0,0,2,0,2,0,2
 Archetype - TP-Techniques-de-test,pokedex.api,PokemonMetadata,0,33,0,0,0,12,0,6,0,6
