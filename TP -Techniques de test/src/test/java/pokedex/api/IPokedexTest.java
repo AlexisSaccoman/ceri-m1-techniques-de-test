@@ -65,6 +65,7 @@ public class IPokedexTest {
 
     @Test
     public void testGetPokemon() throws PokedexException {
+        // test le getPokemon
         myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
         Pokemon bulbi = myPokedex.getPokemon(0);
 
