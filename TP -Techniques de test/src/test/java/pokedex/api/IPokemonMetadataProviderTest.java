@@ -16,7 +16,7 @@ public class IPokemonMetadataProviderTest {
     PokemonMetadata bulbiMetadata;
     PokemonMetadata aquaMetadata;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() throws PokedexException{
         myDataProvider = new PokemonMetadataProvider();
         bulbiMetadata = myDataProvider.getPokemonMetadata(0);

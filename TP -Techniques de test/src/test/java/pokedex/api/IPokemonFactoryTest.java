@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 public class IPokemonFactoryTest {
-    private IPokemonFactory pokemonFactory = new PokemonFactory();
+    IPokemonFactory pokemonFactory = new PokemonFactory();
     Pokemon myBulbizarre;
     Pokemon myAquali;
 
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         pokemonFactory = new PokemonFactory();
         myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);

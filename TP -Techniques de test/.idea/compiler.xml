@@ -12,5 +12,8 @@
         <module name="TP-Techniques-de-test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ceri-m1-techniques-de-test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

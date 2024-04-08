@@ -17,7 +17,7 @@ public class IPokemonTrainerFactoryTest {
     String name;
     Team team;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp(){
         myTrainerFactory = mock(IPokemonTrainerFactory.class);
         myPokedexFactory = mock(IPokedexFactory.class);

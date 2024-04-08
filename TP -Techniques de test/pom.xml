@@ -124,8 +124,8 @@
 
 
     </plugins>
-    <testSourceDirectory>src/main/test/</testSourceDirectory>
     <sourceDirectory>src/main/java/</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
   </build>
 
 

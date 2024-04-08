@@ -16,7 +16,7 @@ public class IPokedexFactoryTest {
     IPokemonFactory pokemonFactory;
     IPokedex pokedex;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         pokedexFactory = new PokedexFactory();
         pokemonMetadataProvider = new PokemonMetadataProvider();
