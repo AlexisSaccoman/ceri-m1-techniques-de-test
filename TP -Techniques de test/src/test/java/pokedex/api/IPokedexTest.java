@@ -39,18 +39,18 @@ public class IPokedexTest {
     }
 
     @Test
-    public void addPokemonTest() throws PokedexException {
+    public void testAddPokemon() throws PokedexException {
         int index = myPokedex.addPokemon(myBulbizarre);
         assertEquals(myBulbizarre, myPokedex.getPokemon(myBulbizarre.getIndex()));
     }
 
     @Test
-    public void sizeTest() {
+    public void testSize() {
         assertEquals(myPokedex.size(), 2);
     }
 
     @Test
-    public void getPokemonMetadataTest() throws PokedexException {
+    public void testGetPokemonMetadata() throws PokedexException {
         int index = myPokedex.getPokemon(0).getIndex();
         String name = myPokedex.getPokemon(0).getName();
         int attack = myPokedex.getPokemon(0).getAttack();
@@ -65,14 +65,14 @@ public class IPokedexTest {
     }
 
     @Test
-    public void throwPokedexExceptionTest() throws PokedexException {
+    public void testThrowPokedexException() throws PokedexException {
         assertThrows(PokedexException.class, () -> {
             myPokedex.getPokemon(156);
         });
     }
 
     @Test
-    public void getSortedList() {
+    public void testGetSortedList() {
         assertNotNull(myPokedex.getPokemons());
         assertNotNull(myPokedex.getPokemons(PokemonComparators.NAME));
     }

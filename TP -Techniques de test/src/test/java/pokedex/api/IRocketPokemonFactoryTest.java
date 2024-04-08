@@ -26,19 +26,19 @@ public class IRocketPokemonFactoryTest {
         assertNotNull(pokemonFactory.createPokemon(133, 2729, 202, 5000, 4));
     }
     @Test
-    public void TestGetHP() {
+    public void testGetHP() {
         assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getCp(), myBulbizarre.getCp());
     }
     @Test
-    public void TestGetCP(){
+    public void testGetCP(){
         assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getHp(), myBulbizarre.getHp());
     }
     @Test
-    public void TestGetDust(){
+    public void testGetDust(){
         assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getDust(), myBulbizarre.getDust());
     }
     @Test
-    public void TestGetCandy(){
+    public void testGetCandy(){
         assertEquals(pokemonFactory.createPokemon(0, 613, 64, 4000, 4).getCandy(), myBulbizarre.getCandy());
     }
 }

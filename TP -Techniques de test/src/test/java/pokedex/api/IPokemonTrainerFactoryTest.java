@@ -29,23 +29,23 @@ public class IPokemonTrainerFactoryTest {
     }
 
     @Test
-    public void createTrainerTest() {
+    public void testCreateTrainer() {
         myPokemonTrainer = myTrainerFactory.createTrainer(name, team, myPokedexFactory);
         assertNotNull(myPokemonTrainer);
     }
 
     @Test
-    public void getNameTest() {
+    public void testGetName() {
         assertEquals(name, myPokemonTrainer.getName());
     }
 
     @Test
-    public void getTeam() {
+    public void testGetTeam() {
         assertEquals(team, myPokemonTrainer.getTeam());
     }
 
     @Test
-    public void getPokedex() {
+    public void testGetPokedex() {
         assertNotNull(myPokemonTrainer.getPokedex());
     }
 }

@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: pokedex.api.IPokemonTrainerFactoryTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.005 sec <<< FAILURE!
+pokedex.api.IPokemonTrainerFactoryTest.testGetTeam()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.PokemonTrainer.getTeam()" because "this.myPokemonTrainer" is null
+	at pokedex.api.IPokemonTrainerFactoryTest.testGetTeam(IPokemonTrainerFactoryTest.java:44)
+
+pokedex.api.IPokemonTrainerFactoryTest.testGetName()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.PokemonTrainer.getName()" because "this.myPokemonTrainer" is null
+	at pokedex.api.IPokemonTrainerFactoryTest.testGetName(IPokemonTrainerFactoryTest.java:39)
+
+pokedex.api.IPokemonTrainerFactoryTest.testCreateTrainer()  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.IPokemonTrainerFactory.createTrainer(String, pokedex.api.Team, pokedex.api.IPokedexFactory)" because "this.myTrainerFactory" is null
+	at pokedex.api.IPokemonTrainerFactoryTest.testCreateTrainer(IPokemonTrainerFactoryTest.java:33)
+
+pokedex.api.IPokemonTrainerFactoryTest.testGetPokedex()  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "pokedex.api.PokemonTrainer.getPokedex()" because "this.myPokemonTrainer" is null
+	at pokedex.api.IPokemonTrainerFactoryTest.testGetPokedex(IPokemonTrainerFactoryTest.java:49)
+

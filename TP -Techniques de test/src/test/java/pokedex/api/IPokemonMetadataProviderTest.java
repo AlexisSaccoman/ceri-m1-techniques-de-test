@@ -35,7 +35,7 @@ public class IPokemonMetadataProviderTest {
     }
 
     @Test
-    public void TestPokedexException() throws PokedexException {
+    public void testPokedexException() throws PokedexException {
         assertEquals(myDataProvider.getPokemonMetadata(-58), null);
         assertEquals(myDataProvider.getPokemonMetadata(1000), null);
     }

@@ -1,5 +1,6 @@
 package pokedex.api;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
@@ -25,7 +26,9 @@ public class IPokedexFactoryTest {
     }
 
     @Test
-    public void createPokedexTest() {
+    public void testCreatePokedex() {
         assertNotNull(pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory));
     }
+
+
 }

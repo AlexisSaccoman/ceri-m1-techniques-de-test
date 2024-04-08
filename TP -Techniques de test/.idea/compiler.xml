@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TP-Techniques-de-test" />
+        <module name="TP -Techniques de test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
