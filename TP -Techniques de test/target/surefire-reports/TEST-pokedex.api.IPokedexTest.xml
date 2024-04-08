@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="5" name="pokedex.api.IPokedexTest" time="0.009" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="pokedex.api.IPokedexTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 verify"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,36 +64,9 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testAddPokemon" time="0">
-    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.addPokemon(pokedex.api.Pokemon)&quot; because &quot;this.myPokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.addPokemon(pokedex.api.Pokemon)&quot; because &quot;this.myPokedex&quot; is null
-	at pokedex.api.IPokedexTest.testAddPokemon(IPokedexTest.java:43)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testSize" time="0">
-    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.myPokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.size()&quot; because &quot;this.myPokedex&quot; is null
-	at pokedex.api.IPokedexTest.testSize(IPokedexTest.java:49)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testGetSortedList" time="0">
-    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.getPokemons()&quot; because &quot;this.myPokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.getPokemons()&quot; because &quot;this.myPokedex&quot; is null
-	at pokedex.api.IPokedexTest.testGetSortedList(IPokedexTest.java:76)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testGetPokemonMetadata" time="0">
-    <failure message="Cannot invoke &quot;pokedex.api.IPokedex.getPokemon(int)&quot; because &quot;this.myPokedex&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.getPokemon(int)&quot; because &quot;this.myPokedex&quot; is null
-	at pokedex.api.IPokedexTest.testGetPokemonMetadata(IPokedexTest.java:54)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testThrowPokedexException" time="0.009">
-    <failure message="Unexpected exception type thrown ==&gt; expected: &lt;pokedex.api.PokedexException&gt; but was: &lt;java.lang.NullPointerException&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==&gt; expected: &lt;pokedex.api.PokedexException&gt; but was: &lt;java.lang.NullPointerException&gt;
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:65)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37)
-	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3082)
-	at pokedex.api.IPokedexTest.testThrowPokedexException(IPokedexTest.java:69)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.IPokedex.getPokemon(int)&quot; because &quot;this.myPokedex&quot; is null
-	at pokedex.api.IPokedexTest.lambda$testThrowPokedexException$0(IPokedexTest.java:70)
-	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
-	... 17 more
-</failure>
-  </testcase>
+  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testThrowPokedexException" time="0.001"/>
+  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testGetPokemonMetadata" time="0.002"/>
+  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testAddPokemon" time="0"/>
+  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testSize" time="0.001"/>
+  <testcase classname="pokedex.api.IPokedexTest" name="pokedex.api.IPokedexTest.testGetSortedList" time="0.007"/>
 </testsuite>

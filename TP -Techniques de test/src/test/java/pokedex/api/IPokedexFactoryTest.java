@@ -12,18 +12,10 @@ import pokedex.api.*;
 
 public class IPokedexFactoryTest {
 
-    IPokedexFactory pokedexFactory;
-    IPokemonMetadataProvider pokemonMetadataProvider;
-    IPokemonFactory pokemonFactory;
-    IPokedex pokedex;
-
-    @BeforeEach
-    public void setUp() {
-        pokedexFactory = new PokedexFactory();
-        pokemonMetadataProvider = new PokemonMetadataProvider();
-        pokemonFactory = new PokemonFactory();
-        pokedex = new Pokedex(pokemonFactory);
-    }
+    IPokedexFactory pokedexFactory = new PokedexFactory();;
+    IPokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+    IPokemonFactory pokemonFactory = new PokemonFactory();
+    IPokedex pokedex = new Pokedex(pokemonFactory);
 
     @Test
     public void testCreatePokedex() {

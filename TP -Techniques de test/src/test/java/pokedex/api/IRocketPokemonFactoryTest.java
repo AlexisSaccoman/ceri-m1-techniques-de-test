@@ -1,5 +1,6 @@
 package pokedex.api;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pokedex.apiS.RocketPokemonFactory;
@@ -9,16 +10,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class IRocketPokemonFactoryTest {
     IPokemonFactory pokemonFactory = new RocketPokemonFactory();
-    Pokemon myBulbizarre;
-    Pokemon myAquali;
+    Pokemon myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);
+    Pokemon myAquali = new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
 
-
-    @BeforeEach
-    public void setUp() {
-        pokemonFactory = new RocketPokemonFactory();
-        myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);
-        myAquali = new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
-    }
 
     @Test
     public void testCreatePokemon() {

@@ -12,15 +12,13 @@ import static org.mockito.Mockito.*;
 
 public class IPokemonFactoryTest {
     IPokemonFactory pokemonFactory = new PokemonFactory();
-    Pokemon myBulbizarre;
-    Pokemon myAquali;
+    Pokemon myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);
+    Pokemon myAquali = new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
 
 
-    @BeforeEach
+    @BeforeAll
     public void setUp() {
         pokemonFactory = new PokemonFactory();
-        myBulbizarre = new Pokemon(0, "Bulbizarre", 126,126,90,613,64,4000,4,56);
-        myAquali = new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100);
     }
 
     @Test

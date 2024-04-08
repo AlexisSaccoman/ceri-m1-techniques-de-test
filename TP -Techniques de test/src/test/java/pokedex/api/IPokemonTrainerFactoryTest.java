@@ -11,22 +11,16 @@ import pokedex.api.*;
 
 public class IPokemonTrainerFactoryTest {
 
-    IPokemonTrainerFactory myTrainerFactory;
-    IPokedexFactory myPokedexFactory;
-    PokemonTrainer myPokemonTrainer;
-    String name;
-    Team team;
+    IPokemonTrainerFactory myTrainerFactory = new PokemonTrainerFactory();
+    IPokedexFactory myPokedexFactory = new PokedexFactory();
+    IPokemonFactory pokemonFactory = new PokemonFactory();
 
-    @BeforeEach
-    public void setUp(){
-        myTrainerFactory = mock(IPokemonTrainerFactory.class);
-        myPokedexFactory = mock(IPokedexFactory.class);
-        IPokedex myPokedex = mock(IPokedex.class);
-        team = Team.MYSTIC;
-        name = "Mooonstre";
-        when(myTrainerFactory.createTrainer(name, team, myPokedexFactory)).thenReturn(new PokemonTrainer(name, team, myPokedex));
-        myPokemonTrainer = myTrainerFactory.createTrainer(name, team, myPokedexFactory);
-    }
+    IPokedex myPokedex = new Pokedex(pokemonFactory);
+    PokemonTrainer myPokemonTrainer = new PokemonTrainer("Ash", Team.MYSTIC, myPokedex);
+
+    Team team = Team.MYSTIC;
+    String name = "Ash";
+
 
     @Test
     public void testCreateTrainer() {

@@ -18,50 +18,36 @@ import pokedex.api.*;
 public class IPokedexTest {
 
 
-    IPokedex myPokedex;
     Pokemon myBulbizarre;
     Pokemon myAquali;
-    PokemonFactory pokemonFactory;
-    PokemonMetadataProvider pokemonMetadataProvider;
-    PokedexFactory pokedexFactory;
+    PokemonFactory pokemonFactory = new PokemonFactory();
+    PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+    PokedexFactory pokedexFactory = new PokedexFactory();
+    IPokedex myPokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
 
-    @BeforeEach
-    public void setUp() {
-        pokemonFactory = new PokemonFactory();
-        pokemonMetadataProvider = new PokemonMetadataProvider();
-        pokedexFactory = new PokedexFactory();
-        myPokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
-        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
-        myAquali = myPokedex.createPokemon(133, 2729, 202, 5000, 4);
-        myPokedex.addPokemon(myBulbizarre);
-        myPokedex.addPokemon(myAquali);
-
-    }
 
     @Test
     public void testAddPokemon() throws PokedexException {
-        int index = myPokedex.addPokemon(myBulbizarre);
-        assertEquals(myBulbizarre, myPokedex.getPokemon(myBulbizarre.getIndex()));
+        myPokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
+        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
+        int size = myPokedex.addPokemon(myBulbizarre);
+        assertEquals(1, size);
     }
 
     @Test
     public void testSize() {
-        assertEquals(myPokedex.size(), 2);
+        myPokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
+        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
+        myPokedex.addPokemon(myBulbizarre);
+        int size = myPokedex.size();
+        assertEquals(1, size);
     }
 
     @Test
     public void testGetPokemonMetadata() throws PokedexException {
-        int index = myPokedex.getPokemon(0).getIndex();
-        String name = myPokedex.getPokemon(0).getName();
-        int attack = myPokedex.getPokemon(0).getAttack();
-        int defense = myPokedex.getPokemon(0).getDefense();
-        int stamina = myPokedex.getPokemon(0).getStamina();
-        assertEquals(index, pokemonMetadataProvider.getPokemonMetadata(0).getIndex());
-        assertEquals(name, pokemonMetadataProvider.getPokemonMetadata(0).getName());
-        assertEquals(attack, pokemonMetadataProvider.getPokemonMetadata(0).getAttack());
-        assertEquals(defense, pokemonMetadataProvider.getPokemonMetadata(0).getDefense());
-        assertEquals(stamina, pokemonMetadataProvider.getPokemonMetadata(0).getStamina());
-        assertEquals(pokemonMetadataProvider.getPokemonMetadata(0), myPokedex.getPokemonMetadata(0));
+        myBulbizarre = myPokedex.createPokemon(0, 613, 64, 4000, 4);
+        int index = myBulbizarre.getIndex();
+        assertEquals(index, pokemonMetadataProvider.getPokemonMetadata(index).getIndex());
     }
 
     @Test

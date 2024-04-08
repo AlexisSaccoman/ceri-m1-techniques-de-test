@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pokedex.api.IRocketPokemonFactoryTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.775 sec <<< FAILURE!
-pokedex.api.IRocketPokemonFactoryTest.testGetCandy()  Time elapsed: 0.137 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.Pokemon.getCandy()" because "this.myBulbizarre" is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetCandy(IRocketPokemonFactoryTest.java:42)
-
-pokedex.api.IRocketPokemonFactoryTest.testGetHP()  Time elapsed: 0.138 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.Pokemon.getCp()" because "this.myBulbizarre" is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetHP(IRocketPokemonFactoryTest.java:30)
-
-pokedex.api.IRocketPokemonFactoryTest.testGetDust()  Time elapsed: 0.13 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.Pokemon.getDust()" because "this.myBulbizarre" is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetDust(IRocketPokemonFactoryTest.java:38)
-
-pokedex.api.IRocketPokemonFactoryTest.testGetCP()  Time elapsed: 0.129 sec  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "pokedex.api.Pokemon.getHp()" because "this.myBulbizarre" is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetCP(IRocketPokemonFactoryTest.java:34)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.092 sec

@@ -16,15 +16,10 @@ public class IPokemonMetadataProviderTest {
     PokemonMetadata bulbiMetadata;
     PokemonMetadata aquaMetadata;
 
-    @BeforeEach
-    public void setUp() throws PokedexException{
-        myDataProvider = new PokemonMetadataProvider();
-        bulbiMetadata = myDataProvider.getPokemonMetadata(0);
-        aquaMetadata = myDataProvider.getPokemonMetadata(133);
-    }
 
     @Test
     public void testGetPokemonMetadata() throws PokedexException {
+        aquaMetadata = myDataProvider.getPokemonMetadata(133);
         PokemonMetadata metadata = myDataProvider.getPokemonMetadata(133);
         assertNotNull(metadata);
         assertEquals(133, metadata.getIndex());
@@ -35,8 +30,13 @@ public class IPokemonMetadataProviderTest {
     }
 
     @Test
-    public void testPokedexException() throws PokedexException {
-        assertEquals(myDataProvider.getPokemonMetadata(-58), null);
-        assertEquals(myDataProvider.getPokemonMetadata(1000), null);
+    public void testPokedexException() {
+        assertThrows(PokedexException.class, () -> {
+            myDataProvider.getPokemonMetadata(-58);
+        }, "Expected getPokemonMetadata(-58) to throw a PokedexException");
+
+        assertThrows(PokedexException.class, () -> {
+            myDataProvider.getPokemonMetadata(1000);
+        }, "Expected getPokemonMetadata(1000) to throw a PokedexException");
     }
 }

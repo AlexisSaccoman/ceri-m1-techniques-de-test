@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="4" name="pokedex.api.IRocketPokemonFactoryTest" time="0.775" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="pokedex.api.IRocketPokemonFactoryTest" time="1.092" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 verify"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,25 +64,9 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCandy" time="0.137">
-    <failure message="Cannot invoke &quot;pokedex.api.Pokemon.getCandy()&quot; because &quot;this.myBulbizarre&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.Pokemon.getCandy()&quot; because &quot;this.myBulbizarre&quot; is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetCandy(IRocketPokemonFactoryTest.java:42)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetHP" time="0.138">
-    <failure message="Cannot invoke &quot;pokedex.api.Pokemon.getCp()&quot; because &quot;this.myBulbizarre&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.Pokemon.getCp()&quot; because &quot;this.myBulbizarre&quot; is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetHP(IRocketPokemonFactoryTest.java:30)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetDust" time="0.13">
-    <failure message="Cannot invoke &quot;pokedex.api.Pokemon.getDust()&quot; because &quot;this.myBulbizarre&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.Pokemon.getDust()&quot; because &quot;this.myBulbizarre&quot; is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetDust(IRocketPokemonFactoryTest.java:38)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCP" time="0.129">
-    <failure message="Cannot invoke &quot;pokedex.api.Pokemon.getHp()&quot; because &quot;this.myBulbizarre&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;pokedex.api.Pokemon.getHp()&quot; because &quot;this.myBulbizarre&quot; is null
-	at pokedex.api.IRocketPokemonFactoryTest.testGetCP(IRocketPokemonFactoryTest.java:34)
-</failure>
-  </testcase>
-  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testCreatePokemon" time="0.241"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCP" time="0.186"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testCreatePokemon" time="0.4"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetHP" time="0.195"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetCandy" time="0.193"/>
+  <testcase classname="pokedex.api.IRocketPokemonFactoryTest" name="pokedex.api.IRocketPokemonFactoryTest.testGetDust" time="0.118"/>
 </testsuite>

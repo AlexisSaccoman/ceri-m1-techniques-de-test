@@ -1,9 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pokedex.api.IPokemonMetadataProviderTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE!
-pokedex.api.IPokemonMetadataProviderTest.testPokedexException()  Time elapsed: 0.001 sec  <<< FAILURE!
-pokedex.api.PokedexException: Erreur sur l'index du Pokemon
-	at pokedex.api.PokemonMetadataProvider.getPokemonMetadata(PokemonMetadataProvider.java:25)
-	at pokedex.api.IPokemonMetadataProviderTest.testPokedexException(IPokemonMetadataProviderTest.java:39)
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec

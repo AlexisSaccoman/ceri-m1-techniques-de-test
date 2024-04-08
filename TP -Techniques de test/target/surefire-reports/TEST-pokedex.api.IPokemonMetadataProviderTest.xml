@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="pokedex.api.IPokemonMetadataProviderTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="pokedex.api.IPokemonMetadataProviderTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 verify"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
     <property name="user.language" value="fr"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,11 +64,6 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pokedex.api.IPokemonMetadataProviderTest" name="pokedex.api.IPokemonMetadataProviderTest.testGetPokemonMetadata" time="0.001"/>
-  <testcase classname="pokedex.api.IPokemonMetadataProviderTest" name="pokedex.api.IPokemonMetadataProviderTest.testPokedexException" time="0.001">
-    <failure message="Erreur sur l&apos;index du Pokemon" type="pokedex.api.PokedexException">pokedex.api.PokedexException: Erreur sur l&apos;index du Pokemon
-	at pokedex.api.PokemonMetadataProvider.getPokemonMetadata(PokemonMetadataProvider.java:25)
-	at pokedex.api.IPokemonMetadataProviderTest.testPokedexException(IPokemonMetadataProviderTest.java:39)
-</failure>
-  </testcase>
+  <testcase classname="pokedex.api.IPokemonMetadataProviderTest" name="pokedex.api.IPokemonMetadataProviderTest.testPokedexException" time="0"/>
+  <testcase classname="pokedex.api.IPokemonMetadataProviderTest" name="pokedex.api.IPokemonMetadataProviderTest.testGetPokemonMetadata" time="0"/>
 </testsuite>
