@@ -17,7 +17,7 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
 
     /**
-     * @Return PokemonMetadata
+     * Return the metadata of a Pokemon
      * */
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
