@@ -6,24 +6,31 @@ public class PokemonMetadataProvider implements IPokemonMetadataProvider {
 
     ArrayList&lt;PokemonMetadata&gt; metadataList;
 
-<span class="fc" id="L9">    public PokemonMetadataProvider() {</span>
-<span class="fc" id="L10">        this.metadataList = new ArrayList&lt;PokemonMetadata&gt;();</span>
-<span class="fc" id="L11">        metadataList.add(new PokemonMetadata(0, &quot;Bulbizarre&quot;, 126, 126, 90));</span>
-<span class="fc" id="L12">        metadataList.add(new PokemonMetadata(133, &quot;Aquali&quot;, 186, 168, 260));</span>
-<span class="fc" id="L13">    }</span>
+    /**
+     * Constructor of PokemonMetadataProvider
+     * */
+<span class="fc" id="L12">    public PokemonMetadataProvider() {</span>
+<span class="fc" id="L13">        this.metadataList = new ArrayList&lt;PokemonMetadata&gt;();</span>
+<span class="fc" id="L14">        metadataList.add(new PokemonMetadata(0, &quot;Bulbizarre&quot;, 126, 126, 90));</span>
+<span class="fc" id="L15">        metadataList.add(new PokemonMetadata(133, &quot;Aquali&quot;, 186, 168, 260));</span>
+<span class="fc" id="L16">    }</span>
 
+
+    /**
+     * @Return PokemonMetadata
+     * */
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
-<span class="pc bpc" id="L17" title="2 of 4 branches missed.">        if (index &lt; 0 || index &gt; 150) {</span>
-<span class="nc" id="L18">            throw new PokedexException(&quot;Erreur sur l'index du Pokemon&quot;);</span>
+<span class="pc bpc" id="L24" title="2 of 4 branches missed.">        if (index &lt; 0 || index &gt; 150) {</span>
+<span class="nc" id="L25">            throw new PokedexException(&quot;Erreur sur l'index du Pokemon&quot;);</span>
         }
-<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        for (PokemonMetadata pokemon : metadataList) {</span>
-<span class="fc" id="L21">            int id = pokemon.getIndex();</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">            if (id == index) {</span>
-<span class="fc" id="L23">                return new PokemonMetadata(id, pokemon.getName(), pokemon.getAttack(), pokemon.getDefense(), pokemon.getStamina());</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        for (PokemonMetadata pokemon : metadataList) {</span>
+<span class="fc" id="L28">            int id = pokemon.getIndex();</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            if (id == index) {</span>
+<span class="fc" id="L30">                return new PokemonMetadata(id, pokemon.getName(), pokemon.getAttack(), pokemon.getDefense(), pokemon.getStamina());</span>
             }
-<span class="fc" id="L25">        }</span>
-<span class="nc" id="L26">        return null;</span>
+<span class="fc" id="L32">        }</span>
+<span class="nc" id="L33">        return null;</span>
     }
 
 }
