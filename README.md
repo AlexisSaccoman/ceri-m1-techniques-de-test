@@ -46,4 +46,4 @@ Badges :
 
 [![CircleCI](https://codecov.io/gh/AlexisSaccoman/ceri-m1-techniques-de-test/branch/master/graph/badge.svg)]((https://app.codecov.io/gh/AlexisSaccoman/ceri-m1-techniques-de-test))
 
-[![Static Badge](https://img.shields.io/badge/Documentation-Javadoc-blue)]([https://alexissaccoman.github.io/ceri-m1-techniques-de-test/apidocs/pokedex/api/package-summary.html](https://alexissaccoman.github.io/ceri-m1-techniques-de-test/TP%20-Techniques%20de%20test/target/site/apidocs/pokedex/api/package-summary.html))
+[![Static Badge](https://img.shields.io/badge/Documentation-Javadoc-blue)](https://alexissaccoman.github.io/ceri-m1-techniques-de-test/TP%20-Techniques%20de%20test/target/site/apidocs/pokedex/api/package-summary.html)
